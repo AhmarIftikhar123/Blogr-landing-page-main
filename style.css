@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@300&family=DM+Sans:ital,opsz,wght@1,9..40,200&family=Epilogue&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@200&family=Inter:wght@200&family=Josefin+Sans:wght@200;300&family=Kumbh+Sans:wght@300;400&family=League+Spartan&family=Lexend+Deca:wght@300;400&family=Libre+Franklin:wght@200&family=Open+Sans&family=Outfit:wght@200&family=Overpass:wght@600&family=Plus+Jakarta+Sans:wght@200&family=Poppins:wght@200;300&family=Red+Hat+Display&family=Rubik:wght@300&family=Space+Mono:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@300&family=DM+Sans:ital,opsz,wght@1,9..40,200&family=Epilogue&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@200&family=Inter:wght@200&family=Josefin+Sans:wght@200;300&family=Kumbh+Sans:wght@300;400&family=League+Spartan&family=Lexend+Deca:wght@300;400&family=Libre+Franklin:wght@200&family=Open+Sans&family=Outfit:wght@200&family=Overpass:wght@600&family=Plus+Jakarta+Sans:wght@200&family=Poppins:wght@200;300&family=Red+Hat+Display&family=Rubik:wght@300&family=Space+Mono:wght@700&family=Ubuntu:wght@700&display=swap");
+
+:root {
+  --Light_red_CTA_text: hsl(356, 100%, 66%);
+  --Very_light_red_CTA_hover_background: hsl(355, 100%, 74%);
+  --Very_dark_blue_headings: hsl(208, 49%, 24%);
+  --White_text: hsl(0, 0%, 100%);
+  --Grayish_blue_footer_text: hsl(240, 2%, 79%);
+  --Very_dark_grayish_blue_body_copy: hsl(207, 13%, 34%);
+  --Very_dark_black_blue_footer_background: hsl(240, 10%, 16%);
+  --Very_light_red: hsl(13, 100%, 72%);
+  --Light_red: hsl(353, 100%, 62%);
+  --Very_dark_gray_blue: hsl(237, 17%, 21%);
+  --Very_dark_desaturated_blue: hsl(237, 23%, 32%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  overflow: hidden;
+}
+
+.intor_page {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--Light_red_CTA_text) url(images/bg-pattern-intro-desktop.svg)
+    no-repeat 35% 50%;
+  overflow: hidden;
+  border-radius: 0 0 0 5rem;
+}
+
+/* logo */
+
+.logo {
+  width: 6rem;
+}
+
+/* nav_bar */
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  padding: 2rem;
+}
+
+/* un-ordered_list */
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.8rem;
+  position: relative;
+}
+
+/* positioned_element */
+
+.positioned_element {
+  background: var(--White_text);
+  position: absolute;
+  padding-inline: 1.2rem;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+  border-radius: 0.5rem;
+  transform: translate(-15%, 10%);
+  /* display: none; */
+  opacity: 0; /* Start with opacity set to 0 */
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.positioned_element p {
+  color: var(--Very_dark_grayish_blue_body_copy);
+  transition: all 0.2s ease-in-out;
+}
+
+.positioned_element p:hover {
+  color: var(--Very_dark_gray_blue);
+  text-decoration: none;
+}
+/* list_items */
+
+li p {
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+}
+
+li p:hover {
+  text-decoration: underline solid var(--White_text) 2px;
+  text-underline-offset: 5px;
+}
+.secont_ul {
+  gap: 1rem;
+}
+
+.secont_ul li {
+  padding: 0.6rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+
+.secont_ul li:hover {
+  background: var(--Very_light_red_CTA_hover_background);
+}
+
+/* White_btn */
+
+.White_btn {
+  background: var(--White_text);
+  color: var(--Light_red_CTA_text);
+}
+.White_btn:hover {
+  color: var(--White_text);
+}
+
+/* Heading */
+
+.heading {
+  margin-top: 7rem;
+  color: var(--White_text);
+  font-size: 3.5rem;
+}
+
+/* paragrapg */
+
+.details {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.01rem;
+}
+
+/* trap_btns */
+
+.trap_btns {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 3.5rem;
+}
+
+.trap_btns button {
+  padding: 0.7rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.start_btn {
+  background: var(--White_text);
+  color: var(--Light_red_CTA_text);
+}
+.start_btn:hover {
+  background: var(--Very_light_red_CTA_hover_background);
+  color: var(--White_text);
+}
+
+.learn_btn {
+  background: var(--Light_red_CTA_text);
+  color: var(--White_text);
+}
+
+.learn_btn:hover {
+  background: var(--White_text);
+  color: var(--Light_red_CTA_text);
+}
+
+/* Design_page */
+
+.Design_page {
+  min-height: 100vh;
+  background: var(--White_text);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* design */
+
+.design {
+  margin-block: 5rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.05rem;
+}
+
+/* grid_block */
+
+.grid_block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* left_item */
+
+.left_item {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: left;
+  padding-inline: 3.5rem;
+}
+
+/* design_paragraph */
+
+.design_paragraph {
+  color: var(--Very_dark_grayish_blue_body_copy);
+  margin-top: 1rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.5rem;
+}
+
+.design_heading {
+  font-size: 1.5rem;
+}
+
+/* right_item */
+
+.right_item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 50%;
+  height: 100%;
+  background: url(images/illustration-editor-desktop.svg) no-repeat;
+  background-size: 48rem;
+}
+
+/* Art_page */
+
+.Art_page {
+  min-height: 45vh;
+  width: auto;
+  background-color: var(--Very_dark_gray_blue);
+  border-radius: 0 6rem 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+/* left_Blogr_img */
+
+.left_Blogr_img {
+  width: 50%;
+  overflow: auto;
+}
+
+.left_Blogr_img::after,
+.left_Blogr_img::before {
+  content: "";
+  position: absolute;
+  background: url(images/illustration-phones.svg) no-repeat;
+  background-size: 25rem;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 165%;
+  transform: translate(15%, -8%);
+}
+
+.left_Blogr_img::before {
+  background: url(images/bg-pattern-circles.svg) no-repeat;
+  background-size: 28rem;
+  top: -20%;
+  transform: translate(9%, 0);
+}
+
+/* right_bloger_text */
+
+.right_bloger_text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* bloger_heading */
+
+.bloger_heading {
+  font-size: 1.8rem;
+  color: var(--Grayish_blue_footer_text);
+}
+
+/* bloger_paragraph */
+
+.bloger_paragraph {
+  color: var(--Grayish_blue_footer_text);
+  width: 40rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.04rem;
+}
+
+/* laptop_page */
+
+.laptop_page {
+  min-height: 90vh;
+}
+
+/* right_item_laptop_page */
+
+.right_item_laptop_page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 50%;
+  height: 100%;
+  background: url(images/illustration-laptop-desktop.svg) no-repeat;
+  background-size: 45rem;
+}
+
+footer {
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  background: var(--Very_dark_black_blue_footer_background);
+  margin-top: 5rem;
+}
+
+.laptop_page{
+  min-height: 60vh;
+}
+/* Global_values */
+
+p,
+li {
+  color: var(--White_text);
+}
+
+/* @media Queries */
+
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+  html {
+    font-size: 0.7rem;
+  }
+  .logo img {
+    width: 5rem;
+  }
+  .intor_page {
+    min-height: 50vh;
+  }
+
+  .Design_page {
+    min-height: 70vh;
+  }
+
+  .bloger_paragraph {
+    width: 30rem;
+  }
+  .Art_page {
+    min-height: 30vh;
+    margin-block: 1rem;
+  }
+  .laptop_page{
+    min-height: 45vh;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 680px) {
+  html {
+    font-size: 0.5rem;
+  }
+  .logo img {
+    width: 5rem;
+  }
+  .intor_page {
+    min-height: 40vh;
+  }
+
+  .Design_page {
+    min-height: 50vh;
+  }
+  .Art_page {
+    min-height: 22vh;
+  }
+  .laptop_page{
+    min-height: 40vh;
+  }
+  
+}
